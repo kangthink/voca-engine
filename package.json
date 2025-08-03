@@ -1,6 +1,6 @@
 {
-  "name": "voca-engine",
-  "version": "1.0.0",
+  "name": "@kangthink/voca-engine",
+  "version": "1.0.1",
   "description": "A vocabulary enhancement assistant that helps users collect, manage, and reuse vocabulary suggestions",
   "main": "dist/index.js",
   "browser": "dist/index.browser.js",

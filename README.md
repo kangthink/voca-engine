@@ -16,7 +16,7 @@ A vocabulary enhancement assistant that helps users collect, manage, and reuse v
 ## Installation
 
 ```bash
-npm install voca-engine
+npm install @kangthink/voca-engine
 ```
 
 ## Quick Start
@@ -25,7 +25,7 @@ npm install voca-engine
 
 ```bash
 # Install globally for CLI access
-npm install -g voca-engine
+npm install -g @kangthink/voca-engine
 
 # Quick workflow: add input and generate suggestions
 voca-engine quick -t expression -c "노래 소리가 잔잔하게 들린다"
@@ -40,7 +40,7 @@ voca-engine quick -t expression -c "테스트 표현" --mock
 ### Using as a Library
 
 ```typescript
-import { VocaEngine, OpenAIProvider, InputType } from 'voca-engine';
+import { VocaEngine, OpenAIProvider, InputType } from '@kangthink/voca-engine';
 
 // Initialize with OpenAI provider
 const provider = new OpenAIProvider(process.env.OPENAI_API_KEY);
@@ -261,7 +261,7 @@ voca-engine search -c ghi789 -q "노래"
 ### Programmatic Usage
 
 ```typescript
-import { VocaEngine, MockLLMProvider, InputType } from 'voca-engine';
+import { VocaEngine, MockLLMProvider, InputType } from '@kangthink/voca-engine';
 
 // Use mock provider for testing
 const engine = new VocaEngine({
@@ -319,7 +319,7 @@ async function example() {
 ## Browser Usage
 
 ```typescript
-import { VocaEngine, MockLLMProvider } from 'voca-engine/browser';
+import { VocaEngine, MockLLMProvider } from '@kangthink/voca-engine/browser';
 
 // Browser environment only supports MockLLMProvider
 const engine = new VocaEngine({
