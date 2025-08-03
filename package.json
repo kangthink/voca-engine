@@ -1,0 +1,72 @@
+{
+  "name": "voca-engine",
+  "version": "1.0.0",
+  "description": "A vocabulary enhancement assistant that helps users collect, manage, and reuse vocabulary suggestions",
+  "main": "dist/index.js",
+  "browser": "dist/index.browser.js",
+  "bin": {
+    "voca-engine": "dist/cli/index.js"
+  },
+  "exports": {
+    ".": {
+      "import": "./dist/index.js",
+      "require": "./dist/index.js",
+      "browser": "./dist/index.browser.js"
+    },
+    "./browser": "./dist/index.browser.js",
+    "./cli": "./dist/cli/index.js"
+  },
+  "types": "dist/index.d.ts",
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "dev": "tsc --watch",
+    "test": "jest",
+    "clean": "rm -rf dist",
+    "prepublishOnly": "npm run clean && npm run build && npm run test",
+    "cli": "node dist/cli/index.js"
+  },
+  "keywords": [
+    "vocabulary",
+    "language",
+    "learning",
+    "assistant",
+    "cli",
+    "typescript"
+  ],
+  "author": "Alex",
+  "license": "MIT",
+  "dependencies": {
+    "commander": "^11.0.0",
+    "uuid": "^9.0.0",
+    "openai": "^4.20.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.0.0",
+    "@types/uuid": "^9.0.0",
+    "@types/jest": "^29.0.0",
+    "typescript": "^5.0.0",
+    "jest": "^29.0.0",
+    "ts-jest": "^29.0.0"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "testEnvironment": "node",
+    "testMatch": [
+      "**/__tests__/**/*.ts",
+      "**/*.test.ts"
+    ],
+    "collectCoverageFrom": [
+      "src/**/*.ts",
+      "!src/cli/**",
+      "!src/**/__tests__/**",
+      "!src/**/*.test.ts"
+    ]
+  },
+  "engines": {
+    "node": ">=16.0.0"
+  }
+}
